@@ -1,1197 +1,357 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <!-- Meta Pixel Code -->
-<script>
-!function(f,b,e,v,n,t,s)
-{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-n.queue=[];t=b.createElement(e);t.async=!0;
-t.src=v;s=b.getElementsByTagName(e)[0];
-s.parentNode.insertBefore(t,s)}(window, document,'script',
-'https://connect.facebook.net/en_US/fbevents.js');
-fbq('init', '1504903570648249');
-fbq('track', 'PageView');
-</script>
-<noscript><img height="1" width="1" style="display:none"
-src="https://www.facebook.com/tr?id=1504903570648249&ev=PageView&noscript=1"
-/></noscript>
-<!-- End Meta Pixel Code -->
+    <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '1504903570648249');
+    fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=1504903570648249&ev=PageView&noscript=1"
+    /></noscript>
+    <!-- End Meta Pixel Code -->
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kalyan Master - Premium Matka Gaming Platform</title>
-    <meta name="description" content="India's most trusted Matka gaming platform. Play Kalyan, Starline, Gali Disawar and more. Instant results, fast payouts, 24/7 support.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+    <title>Kalyan Master</title>
+    <meta name="description" content="Welcome to Kalyan Master.">
+    
+    <!-- Google Fonts & Font Awesome Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800;900&family=Outfit:wght@600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-    <link rel="icon" href="log.logo.webp" type="image/png">
+    <link rel="icon" href="kmlogo.png" type="image/png">
 
     <style>
-        :root {
-            --primary-dark: #0f172a;
-            --primary: #d97706;
-            --primary-light: #f59e0b;
-            --gold: #eab308;
-            --gold-light: #facc15;
-            --gold-pale: #fef9c3;
-            --white: #ffffff;
-            --bg-dark: #0f172a;
-            --bg: #f8fafc;
-            --text: #0f172a;
-            --text-light: #475569;
-            --radius: 16px;
-            --shadow: 0 8px 32px rgba(234, 179, 8, 0.12);
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+            -webkit-tap-highlight-color: transparent;
         }
 
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-
-        body {
-            font-family: 'Poppins', sans-serif;
-            background: var(--bg);
-            color: var(--text);
+        html, body {
+            width: 100%;
+            min-height: 100vh;
             overflow-x: hidden;
+            background-color: #fefce8;
         }
 
-        /* ===== NAVBAR ===== */
-        .navbar {
-            position: fixed;
-            top: 0; left: 0; right: 0;
-            z-index: 999;
-            background: rgba(255, 255, 255, 0.85);
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
+        /* ===== MAIN LANDING PAGE CONTAINER ===== */
+        .landing-wrapper {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 40px 20px;
+            background: 
+                radial-gradient(circle at 10% 10%, rgba(253, 224, 71, 0.25) 0%, transparent 45%),
+                radial-gradient(circle at 90% 90%, rgba(250, 204, 21, 0.25) 0%, transparent 45%),
+                radial-gradient(circle at 50% 50%, rgba(254, 240, 138, 0.3) 0%, transparent 70%),
+                linear-gradient(180deg, #ffffff 0%, #fffbeb 50%, #fef08a 100%);
+            position: relative;
+        }
+
+        /* Decorative background elements */
+        .bg-deco-circle {
+            position: absolute;
+            border-radius: 50%;
+            border: 2px solid rgba(234, 179, 8, 0.15);
+            pointer-events: none;
+        }
+
+        .deco-1 { width: 300px; height: 300px; top: -50px; left: -100px; }
+        .deco-2 { width: 400px; height: 400px; bottom: -100px; right: -100px; }
+
+        .landing-content {
+            width: 100%;
+            max-width: 420px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: relative;
+            z-index: 2;
+        }
+
+        /* ===== LOGO DISPLAY ===== */
+        .logo-container {
+            width: 100%;
+            max-width: 320px;
+            margin-bottom: 35px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .logo-container img {
+            width: 100%;
+            max-width: 290px;
+            height: auto;
+            object-fit: contain;
+            filter: drop-shadow(0 15px 35px rgba(234, 179, 8, 0.3));
+            transition: transform 0.3s ease;
+        }
+
+        .logo-container img:hover {
+            transform: scale(1.03);
+        }
+
+        /* ===== ACTION BUTTONS CONTAINER ===== */
+        .actions-group {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        /* BUTTON 1: DOWNLOAD APP (GOLDEN) */
+        .btn-download-gold {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 16px;
+            width: 100%;
+            padding: 20px 24px;
+            border-radius: 24px;
+            background: linear-gradient(180deg, #fde047 0%, #eab308 50%, #ca8a04 100%);
+            color: #1e1b4b;
+            font-size: 20px;
+            font-weight: 900;
+            text-decoration: none;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            box-shadow: 0 12px 30px rgba(234, 179, 8, 0.45), inset 0 2px 2px rgba(255, 255, 255, 0.8);
+            border: 2.5px solid #ffffff;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .btn-download-gold i {
+            font-size: 24px;
+            color: #713f12;
+        }
+
+        .btn-download-gold:hover {
+            transform: translateY(-3px) scale(1.02);
+            box-shadow: 0 18px 40px rgba(234, 179, 8, 0.6);
+        }
+
+        .btn-download-gold:active {
+            transform: translateY(1px);
+        }
+
+        /* BUTTON 2: WHATSAPP US (GREEN) */
+        .btn-whatsapp-green {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 16px;
+            width: 100%;
+            padding: 20px 24px;
+            border-radius: 24px;
+            background: linear-gradient(180deg, #4ade80 0%, #22c55e 50%, #16a34a 100%);
+            color: #ffffff;
+            font-size: 20px;
+            font-weight: 900;
+            text-decoration: none;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            box-shadow: 0 12px 30px rgba(34, 197, 94, 0.4), inset 0 2px 2px rgba(255, 255, 255, 0.5);
+            border: 2.5px solid #ffffff;
+            transition: all 0.3s ease;
+        }
+
+        .btn-whatsapp-green i {
+            font-size: 28px;
+        }
+
+        .btn-whatsapp-green:hover {
+            transform: translateY(-3px) scale(1.02);
+            box-shadow: 0 18px 40px rgba(34, 197, 94, 0.55);
+        }
+
+        .btn-whatsapp-green:active {
+            transform: translateY(1px);
+        }
+
+        /* CARD 3: SAFE & SECURE TRUST CARD */
+        .trust-card {
+            background: #ffffff;
+            border: 2px solid #fef08a;
+            border-radius: 24px;
+            padding: 16px 22px;
             display: flex;
             align-items: center;
             justify-content: space-between;
-            padding: 12px 24px;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.03);
-            border-bottom: 1px solid rgba(255, 255, 255, 0.4);
-        }
-        .navbar::after {
-            content: '';
-            position: absolute;
-            bottom: 0; left: 0; right: 0;
-            height: 3px;
-            background: linear-gradient(90deg, #eab308, #facc15, #fef08a, #facc15, #eab308);
-        }
-        .nav-logo {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            text-decoration: none;
-        }
-        .nav-logo img {
-            width: 42px; height: 42px;
-            border-radius: 50%;
-            border: 2px solid var(--gold-light);
-            object-fit: cover;
-        }
-        .nav-brand {
-            display: flex;
-            flex-direction: column;
-            line-height: 1.1;
-        }
-        .nav-brand .name {
-            font-size: 15px;
-            font-weight: 800;
-            color: var(--primary-dark);
-            letter-spacing: 0.5px;
-            text-transform: uppercase;
-        }
-        .nav-brand .sub {
-            font-size: 9px;
-            color: var(--primary);
-            font-weight: 600;
-            letter-spacing: 2px;
-        }
-        .nav-btns {
-            display: flex;
-            gap: 8px;
-        }
-        .nav-btn {
-            padding: 8px 18px;
-            border-radius: 25px;
-            font-size: 10px;
-            font-weight: 700;
-            text-decoration: none;
-            transition: all 0.25s ease;
-            letter-spacing: 0.3px;
-        }
-        .nav-btn-login {
-            background: rgba(234, 179, 8, 0.08);
-            color: var(--primary);
-            border: 1.5px solid rgba(234, 179, 8, 0.25);
-        }
-        .nav-btn-login:hover { background: rgba(234, 179, 8, 0.15); }
-        .nav-btn-register {
-            background: linear-gradient(135deg, var(--gold), var(--gold-light));
-            color: var(--primary-dark);
-        }
-        .nav-btn-register:hover { transform: translateY(-2px); box-shadow: 0 4px 16px rgba(234, 179, 8, 0.3); }
-
-        /* ===== HERO ===== */
-        .hero {
-            min-height: 100vh;
-            background:
-                radial-gradient(circle at 15% 50%, rgba(234, 179, 8, 0.04) 0%, transparent 55%),
-                radial-gradient(circle at 85% 70%, rgba(245, 158, 11, 0.04) 0%, transparent 55%),
-                #ffffff;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 120px 20px 60px;
-            position: relative;
-            overflow: hidden;
-        }
-        .hero::before {
-            content: '';
-            position: absolute;
-            top: -100px; right: -100px;
-            width: 500px; height: 500px;
-            border-radius: 50%;
-            background: radial-gradient(circle, rgba(234, 179, 8, 0.04) 0%, transparent 70%);
-            animation: pulse 4s ease-in-out infinite;
-        }
-        .hero::after {
-            content: '';
-            position: absolute;
-            bottom: -80px; left: -80px;
-            width: 400px; height: 400px;
-            border-radius: 50%;
-            background: radial-gradient(circle, rgba(245, 158, 11, 0.06) 0%, transparent 70%);
-            animation: pulse 5s ease-in-out infinite reverse;
-        }
-        @keyframes pulse {
-            0%, 100% { transform: scale(1); opacity: 0.7; }
-            50% { transform: scale(1.15); opacity: 1; }
-        }
-
-        .hero-inner {
-            position: relative;
-            z-index: 1;
-            text-align: center;
-            max-width: 650px;
+            box-shadow: 0 10px 25px rgba(234, 179, 8, 0.15);
             width: 100%;
+            transition: all 0.3s ease;
         }
 
-        .hero-logo-wrap {
-            position: relative;
-            display: inline-block;
-            margin-bottom: 28px;
-        }
-        .hero-logo-ring {
-            width: 140px; height: 140px;
-            border-radius: 50%;
-            border: 3px solid transparent;
-            background: linear-gradient(135deg, var(--gold), var(--gold-light), var(--gold)) border-box;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 0 auto;
-            box-shadow: 0 10px 40px rgba(234, 179, 8, 0.2);
-            animation: glow 3s ease-in-out infinite;
-            padding: 4px;
-        }
-        @keyframes glow {
-            0%, 100% { box-shadow: 0 10px 30px rgba(234, 179, 8, 0.2); }
-            50% { box-shadow: 0 15px 45px rgba(234, 179, 8, 0.3); }
-        }
-        .hero-logo-ring img {
-            width: 128px; height: 128px;
-            border-radius: 50%;
-            object-fit: cover;
-            background: #fff;
+        .trust-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 14px 30px rgba(234, 179, 8, 0.22);
+            border-color: #facc15;
         }
 
-        .hero-badge {
-            display: inline-block;
-            background: rgba(234, 179, 8, 0.08);
-            color: var(--primary);
-            font-size: 11px;
-            font-weight: 700;
-            letter-spacing: 2px;
-            padding: 6px 20px;
-            border-radius: 20px;
-            margin-bottom: 18px;
-            text-transform: uppercase;
-        }
-
-        .hero h1 {
-            font-size: clamp(32px, 7vw, 48px);
-            font-weight: 900;
-            color: var(--primary-dark);
-            letter-spacing: 0.5px;
-            line-height: 1.15;
-            margin-bottom: 12px;
-        }
-        .hero h1 span {
-            background: linear-gradient(135deg, var(--primary), var(--gold-light));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-
-        .hero-desc {
-            font-size: 15px;
-            color: var(--text-light);
-            margin-bottom: 36px;
-            line-height: 1.7;
-        }
-
-        .hero-cta {
-            display: flex;
-            gap: 14px;
-            flex-wrap: wrap;
-            justify-content: center;
-            margin-bottom: 48px;
-        }
-        .btn-hero {
-            display: inline-flex;
-            align-items: center;
-            gap: 9px;
-            padding: 14px 28px;
-            border-radius: 50px;
-            font-size: 15px;
-            font-weight: 700;
-            text-decoration: none;
-            transition: all 0.28s ease;
-            letter-spacing: 0.3px;
-        }
-        .btn-hero-primary {
-            background: linear-gradient(135deg, var(--gold), var(--gold-light));
-            color: var(--primary-dark);
-            box-shadow: 0 6px 20px rgba(234, 179, 8, 0.2);
-        }
-        .btn-hero-primary:hover { transform: translateY(-3px); box-shadow: 0 12px 36px rgba(234, 179, 8, 0.3); }
-        .btn-hero-whatsapp {
-            background: linear-gradient(135deg, #25D366, #128C7E);
-            color: #fff;
-            box-shadow: 0 6px 20px rgba(37, 211, 102, 0.2);
-        }
-        .btn-hero-whatsapp:hover { transform: translateY(-3px); box-shadow: 0 12px 30px rgba(37, 211, 102, 0.3); }
-        .btn-hero-outline {
-            background: rgba(234, 179, 8, 0.05);
-            color: var(--primary);
-            border: 1.5px solid rgba(234, 179, 8, 0.2);
-        }
-        .btn-hero-outline:hover { background: rgba(234, 179, 8, 0.1); transform: translateY(-2px); }
-
-        .hero-stats {
-            display: flex;
-            gap: 0;
-            justify-content: center;
-            background: rgba(255, 255, 255, 0.85);
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(234, 179, 8, 0.15);
-            border-radius: 20px;
-            overflow: hidden;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.03);
-        }
-        .stat-item {
-            flex: 1;
-            padding: 18px 10px;
-            text-align: center;
-            border-right: 1px solid rgba(234, 179, 8, 0.08);
-        }
-        .stat-item:last-child { border-right: none; }
-        .stat-num {
+        .laurel-leaf {
+            color: #eab308;
             font-size: 22px;
-            font-weight: 900;
-            color: var(--primary);
-            display: block;
-        }
-        .stat-label {
-            font-size: 10px;
-            color: var(--text-light);
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
+            opacity: 0.85;
         }
 
-        /* ===== SECTIONS COMMON ===== */
-        .section {
-            padding: 80px 20px;
-            background: var(--bg);
-        }
-        .section-alt { background: var(--white); }
-
-        .container {
-            max-width: 1100px;
-            margin: 0 auto;
-        }
-
-        .section-head {
-            text-align: center;
-            margin-bottom: 50px;
-        }
-        .section-head .label {
-            display: inline-block;
-            background: rgba(234, 179, 8, 0.08);
-            color: var(--primary);
-            font-size: 11px;
-            font-weight: 700;
-            letter-spacing: 2px;
-            padding: 6px 18px;
-            border-radius: 20px;
-            margin-bottom: 14px;
-            text-transform: uppercase;
-        }
-        .section-head h2 {
-            font-size: clamp(24px, 5vw, 36px);
-            font-weight: 800;
-            color: var(--primary-dark);
-            margin-bottom: 10px;
-        }
-        .section-head p {
-            font-size: 15px;
-            color: var(--text-light);
-        }
-        .divider {
-            width: 60px;
-            height: 4px;
-            background: linear-gradient(90deg, var(--primary), var(--gold-light));
-            border-radius: 4px;
-            margin: 14px auto 0;
-        }
-
-        /* ===== GAME RATES ===== */
-        .rates-wrap {
-            background: var(--white);
-            border-radius: 20px;
-            overflow: hidden;
-            box-shadow: var(--shadow);
-            border: 1px solid rgba(234, 179, 8, 0.08);
-        }
-        .rates-head {
-            display: grid;
-            grid-template-columns: 1fr 1fr 1fr;
-            background: linear-gradient(135deg, var(--primary-dark), var(--primary));
-            color: #fff;
-            font-size: 13px;
-            font-weight: 700;
-            letter-spacing: 1px;
-            text-transform: uppercase;
-        }
-        .rates-head div, .rates-row div {
-            padding: 14px 16px;
-            text-align: center;
-        }
-        .rates-row {
-            display: grid;
-            grid-template-columns: 1fr 1fr 1fr;
-            border-bottom: 1px solid rgba(234, 179, 8, 0.06);
-            transition: background 0.2s;
-        }
-        .rates-row:hover { background: rgba(234, 179, 8, 0.03); }
-        .rates-row:last-child { border-bottom: none; }
-        .game-type-cell {
-            font-weight: 600;
-            color: var(--primary-dark);
-            text-align: left !important;
+        .trust-center-content {
             display: flex;
             align-items: center;
-            gap: 10px;
+            gap: 14px;
         }
-        .game-type-cell i {
-            width: 28px; height: 28px;
-            border-radius: 8px;
-            background: rgba(234, 179, 8, 0.08);
-            color: var(--primary);
+
+        .shield-badge {
+            width: 46px;
+            height: 46px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #fef08a, #eab308);
+            color: #713f12;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 13px;
+            font-size: 22px;
+            box-shadow: 0 4px 12px rgba(234, 179, 8, 0.35);
             flex-shrink: 0;
         }
-        .bet-cell { color: var(--text-light); font-weight: 500; }
-        .win-cell {
-            color: #16a34a;
-            font-weight: 800;
-            font-size: 15px;
-        }
-        .highlight-row { background: rgba(234, 179, 8, 0.02); }
 
-        /* ===== FEATURES ===== */
-        .features-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 24px;
-        }
-        .feature-card {
-            background: var(--white);
-            border-radius: var(--radius);
-            padding: 32px 24px;
-            text-align: center;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.03);
-            border: 1px solid rgba(234, 179, 8, 0.06);
-            transition: all 0.3s ease;
-            position: relative;
-            overflow: hidden;
-        }
-        .feature-card::before {
-            content: '';
-            position: absolute;
-            top: 0; left: 0; right: 0;
-            height: 4px;
-            background: linear-gradient(90deg, var(--gold), var(--gold-light));
-            opacity: 0;
-            transition: opacity 0.3s;
-        }
-        .feature-card:hover::before { opacity: 1; }
-        .feature-card:hover { transform: translateY(-6px); box-shadow: var(--shadow); }
-        .feature-icon {
-            width: 64px; height: 64px;
-            border-radius: 18px;
-            background: rgba(234, 179, 8, 0.08);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 0 auto 20px;
-            font-size: 26px;
-            color: var(--primary);
-            transition: all 0.3s;
-        }
-        .feature-card:hover .feature-icon {
-            background: linear-gradient(135deg, var(--gold), var(--gold-light));
-            color: var(--primary-dark);
-            box-shadow: 0 6px 20px rgba(234, 179, 8, 0.25);
-        }
-        .feature-card h4 {
-            font-size: 16px;
-            font-weight: 700;
-            color: var(--primary-dark);
-            margin-bottom: 8px;
-        }
-        .feature-card p {
-            font-size: 13px;
-            color: var(--text-light);
-            line-height: 1.6;
+        .trust-text {
+            text-align: left;
         }
 
-        /* ===== MARKET RESULTS ===== */
-        .results-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-            gap: 20px;
-            margin-bottom: 36px;
-        }
-        .result-card {
-            background: var(--white);
-            border-radius: var(--radius);
-            overflow: hidden;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.03);
-            border: 1px solid rgba(234, 179, 8, 0.06);
-            transition: all 0.3s ease;
-        }
-        .result-card:hover { transform: translateY(-4px); box-shadow: var(--shadow); }
-        .result-card-header {
-            background: linear-gradient(135deg, var(--primary-dark), var(--primary));
-            padding: 14px 18px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-        }
-        .result-card-header h3 {
-            color: #fff;
-            font-size: 14px;
-            font-weight: 700;
-            text-transform: uppercase;
-        }
-        .status-badge {
-            font-size: 10px;
-            font-weight: 700;
-            padding: 4px 10px;
-            border-radius: 20px;
-            background: rgba(46,204,113,0.1);
-            color: #16a34a;
-            border: 1px solid rgba(46,204,113,0.25);
-        }
-        .result-body { padding: 20px 18px; }
-        .result-numbers {
-            font-size: 26px;
-            font-weight: 900;
-            color: var(--primary);
-            letter-spacing: 3px;
-            text-align: center;
-            margin-bottom: 16px;
-            font-family: monospace;
-        }
-        .result-actions {
-            display: flex;
-            gap: 10px;
-        }
-        .chart-btn {
-            flex: 1;
-            padding: 9px 0;
-            border-radius: 10px;
-            font-size: 12px;
-            font-weight: 700;
-            text-decoration: none;
-            text-align: center;
-            background: var(--bg);
-            color: var(--primary);
-            border: 1.5px solid rgba(234, 179, 8, 0.2);
-            transition: all 0.2s;
-        }
-        .chart-btn:hover { background: var(--primary); color: #fff; }
-        .play-link {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 7px;
-            margin-top: 12px;
-            padding: 10px;
-            border-radius: 10px;
-            background: linear-gradient(135deg, var(--gold), var(--gold-light));
-            color: var(--primary-dark);
-            font-size: 13px;
-            font-weight: 700;
-            text-decoration: none;
-            transition: all 0.25s;
-        }
-        .play-link:hover { transform: translateY(-2px); box-shadow: 0 6px 18px rgba(234, 179, 8, 0.3); }
-
-        /* ===== HOW TO PLAY ===== */
-        .steps {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 28px;
-            position: relative;
-        }
-        .step-card {
-            background: var(--white);
-            border-radius: var(--radius);
-            padding: 36px 24px 28px;
-            text-align: center;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.03);
-            border: 1px solid rgba(234, 179, 8, 0.06);
-            position: relative;
-            transition: all 0.3s ease;
-        }
-        .step-card:hover { transform: translateY(-4px); box-shadow: var(--shadow); }
-        .step-num {
-            position: absolute;
-            top: -16px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 36px; height: 36px;
-            border-radius: 50%;
-            background: linear-gradient(135deg, var(--gold), var(--gold-light));
-            color: var(--primary-dark);
-            font-size: 16px;
-            font-weight: 900;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            box-shadow: 0 4px 14px rgba(234, 179, 8, 0.25);
-        }
-        .step-icon {
-            width: 70px; height: 70px;
-            border-radius: 20px;
-            background: rgba(234, 179, 8, 0.08);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 10px auto 20px;
-            font-size: 28px;
-            color: var(--primary);
-            transition: all 0.3s;
-        }
-        .step-card:hover .step-icon {
-            background: linear-gradient(135deg, var(--gold), var(--gold-light));
-            color: var(--primary-dark);
-            box-shadow: 0 8px 24px rgba(234, 179, 8, 0.25);
-        }
-        .step-card h4 {
+        .trust-title {
+            font-family: 'Outfit', sans-serif;
             font-size: 17px;
-            font-weight: 700;
-            color: var(--primary-dark);
-            margin-bottom: 8px;
-        }
-        .step-card p {
-            font-size: 13px;
-            color: var(--text-light);
-            line-height: 1.6;
+            font-weight: 900;
+            color: #0f172a;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+            line-height: 1.1;
         }
 
-        /* ===== CTA SECTION ===== */
-        .cta-section {
-            background: linear-gradient(135deg, #0f172a, #1e293b, #0f172a);
-            padding: 80px 20px;
+        .trust-subtitle {
+            font-size: 11px;
+            font-weight: 700;
+            color: #ca8a04;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+            margin-top: 2px;
+        }
+
+        /* ===== SECONDARY SECTIONS (COLLAPSIBLE / BELOW LANDING) ===== */
+        .details-toggle-wrap {
+            margin-top: 35px;
             text-align: center;
-            position: relative;
-            overflow: hidden;
         }
-        .cta-section::before {
-            content: '';
-            position: absolute;
-            top: -60px; right: -60px;
-            width: 300px; height: 300px;
-            border-radius: 50%;
-            background: radial-gradient(circle, rgba(234, 179, 8, 0.08) 0%, transparent 70%);
-        }
-        .cta-section h2 {
-            font-size: clamp(24px, 5vw, 36px);
-            font-weight: 900;
-            color: #fff;
-            margin-bottom: 12px;
-        }
-        .cta-section p {
-            font-size: 15px;
-            color: rgba(255,255,255,0.8);
-            margin-bottom: 36px;
-        }
-        .cta-btns {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 14px;
-            justify-content: center;
-        }
-        .cta-btn {
+
+        .btn-view-details {
+            background: rgba(234, 179, 8, 0.12);
+            color: #a16207;
+            border: 1px solid rgba(234, 179, 8, 0.3);
+            padding: 8px 20px;
+            border-radius: 50px;
+            font-size: 13px;
+            font-weight: 700;
+            cursor: pointer;
             display: inline-flex;
             align-items: center;
-            gap: 9px;
-            padding: 14px 28px;
-            border-radius: 50px;
-            font-size: 15px;
-            font-weight: 700;
-            text-decoration: none;
-            transition: all 0.28s ease;
-        }
-        .cta-btn-gold {
-            background: linear-gradient(135deg, var(--gold), var(--gold-light));
-            color: var(--primary-dark);
-            box-shadow: 0 6px 24px rgba(234, 179, 8, 0.25);
-        }
-        .cta-btn-gold:hover { transform: translateY(-3px); box-shadow: 0 12px 36px rgba(234, 179, 8, 0.35); }
-        .cta-btn-wa {
-            background: linear-gradient(135deg, #25D366, #128C7E);
-            color: #fff;
-            box-shadow: 0 6px 20px rgba(37, 211, 102, 0.15);
-        }
-        .cta-btn-wa:hover { transform: translateY(-3px); box-shadow: 0 12px 30px rgba(37, 211, 102, 0.25); }
-        .cta-btn-phone {
-            background: rgba(255,255,255,0.1);
-            color: #fff;
-            border: 1.5px solid rgba(255,255,255,0.25);
-        }
-        .cta-btn-phone:hover { background: rgba(255,255,255,0.2); transform: translateY(-2px); }
-
-        /* ===== MARKETS SECTION ===== */
-        .markets-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 28px;
-            margin-top: 20px;
-        }
-        .market-category-card {
-            background: var(--white);
-            border-radius: var(--radius);
-            padding: 36px 28px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.03);
-            border: 1px solid rgba(234, 179, 8, 0.06);
+            gap: 8px;
             transition: all 0.3s ease;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            text-align: center;
-        }
-        .market-category-card:hover {
-            transform: translateY(-6px);
-            box-shadow: var(--shadow);
-            border-color: rgba(234, 179, 8, 0.2);
-        }
-        .market-cat-icon {
-            width: 70px; height: 70px;
-            border-radius: 20px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 28px;
-            color: #0f172a;
-            margin-bottom: 24px;
-            box-shadow: 0 8px 24px rgba(234, 179, 8, 0.15);
-        }
-        .blue-gradient { background: linear-gradient(135deg, #eab308, #d97706); }
-        .cyan-gradient { background: linear-gradient(135deg, #f59e0b, #facc15); }
-        .indigo-gradient { background: linear-gradient(135deg, #fb923c, #fdba74); }
-        
-        .market-category-card h3 {
-            font-size: 20px;
-            font-weight: 800;
-            color: var(--primary-dark);
-            margin-bottom: 12px;
-        }
-        .market-cat-desc {
-            font-size: 14px;
-            color: var(--text-light);
-            line-height: 1.6;
-            margin-bottom: 24px;
-        }
-        .market-list-tags {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 8px;
-            justify-content: center;
-        }
-        .market-tag {
-            background: rgba(234, 179, 8, 0.04);
-            color: var(--primary);
-            font-size: 12px;
-            font-weight: 600;
-            padding: 6px 14px;
-            border-radius: 20px;
-            border: 1px solid rgba(234, 179, 8, 0.08);
-            transition: all 0.2s ease;
-        }
-        .market-category-card:hover .market-tag {
-            background: rgba(234, 179, 8, 0.08);
-            border-color: rgba(234, 179, 8, 0.2);
-        }
-
-        /* ===== FOOTER ===== */
-        footer {
-            background: #0b0f19;
-            padding: 50px 20px 30px;
-        }
-        .footer-inner {
-            max-width: 1100px;
-            margin: 0 auto;
-        }
-        .footer-top {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            flex-wrap: wrap;
-            gap: 20px;
-            padding-bottom: 28px;
-            border-bottom: 1px solid rgba(255,255,255,0.08);
-            margin-bottom: 20px;
-        }
-        .footer-logo {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-        }
-        .footer-logo img {
-            width: 48px; height: 48px;
-            border-radius: 50%;
-            border: 2px solid var(--gold-light);
-            object-fit: cover;
-        }
-        .footer-logo-text .name {
-            font-size: 16px;
-            font-weight: 800;
-            color: #fff;
-        }
-        .footer-logo-text .sub {
-            font-size: 10px;
-            color: var(--gold-light);
-            letter-spacing: 1.5px;
-        }
-        .footer-links {
-            display: flex;
-            gap: 24px;
-            flex-wrap: wrap;
-        }
-        .footer-links a {
-            color: rgba(255,255,255,0.55);
-            font-size: 13px;
             text-decoration: none;
-            transition: color 0.2s;
-        }
-        .footer-links a:hover { color: var(--gold-light); }
-        .footer-bottom {
-            text-align: center;
-            color: rgba(255,255,255,0.35);
-            font-size: 12px;
         }
 
-        /* ===== FLOATING DOWNLOAD ===== */
-        .floating-btn {
-            position: fixed;
-            bottom: 24px;
-            right: 20px;
-            z-index: 999;
-            background: linear-gradient(135deg, var(--gold), var(--gold-light));
-            color: var(--primary-dark);
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            padding: 13px 22px;
-            border-radius: 50px;
-            font-size: 14px;
-            font-weight: 800;
-            text-decoration: none;
-            box-shadow: 0 8px 28px rgba(234, 179, 8, 0.25);
-            animation: floatBounce 2.5s ease-in-out infinite;
-        }
-        @keyframes floatBounce {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-6px); }
-        }
-        .floating-btn:hover { transform: translateY(-4px) scale(1.05); box-shadow: 0 14px 40px rgba(234, 179, 8, 0.45); }
-
-        .animate-spin-slow {
-            animation: spin 8s linear infinite;
-            display: inline-block;
-        }
-        @keyframes spin {
-            from { transform: rotate(0deg); }
-            to { transform: rotate(360deg); }
+        .btn-view-details:hover {
+            background: rgba(234, 179, 8, 0.2);
+            color: #713f12;
         }
 
-        /* ===== RESPONSIVE ===== */
-        @media (max-width: 640px) {
-            .nav-btn-login { display: none; }
-            .hero-stats { flex-direction: column; border-radius: 16px; }
-            .stat-item { border-right: none; border-bottom: 1px solid rgba(255,255,255,0.1); }
-            .stat-item:last-child { border-bottom: none; }
-            .footer-top { flex-direction: column; text-align: center; }
-            .footer-links { justify-content: center; }
+        /* MEDIA QUERIES FOR EXTRA SMALL MOBILE SCREENS */
+        @media (max-width: 380px) {
+            .landing-wrapper {
+                padding: 30px 14px;
+            }
+            .btn-download-gold, .btn-whatsapp-green {
+                font-size: 18px;
+                padding: 16px 18px;
+            }
+            .trust-title {
+                font-size: 15px;
+            }
+            .trust-subtitle {
+                font-size: 10px;
+            }
+            .shield-badge {
+                width: 40px;
+                height: 40px;
+                font-size: 18px;
+            }
         }
     </style>
 </head>
 <body>
 
-    <!-- NAVBAR -->
-    <nav class="navbar">
-        <a class="nav-logo" href="#">
-            <img src="logo.webp" alt="Kalyan Master Logo">
-            <div class="nav-brand">
-                <span class="name">Kalyan Master</span>
-                <span class="sub">✦ Matka Gaming ✦</span>
+    <!-- MAIN CLEAN LANDING PAGE -->
+    <main class="landing-wrapper">
+        <div class="bg-deco-circle deco-1"></div>
+        <div class="bg-deco-circle deco-2"></div>
+
+        <div class="landing-content">
+            
+            <!-- CENTRAL LOGO -->
+            <div class="logo-container">
+                <img src="kmlogo.png" alt="Kalyan Master Logo">
             </div>
-        </a>
-        <div class="nav-btns">
-            <a href="KalyanMaster.apk" class="nav-btn nav-btn-register">
-                    <i class="fas fa-download"></i> Download App
+
+            <!-- ACTION BUTTONS & TRUST CARD -->
+            <div class="actions-group">
+                
+                <!-- 1. DOWNLOAD APP BUTTON -->
+                <a href="Tara567.apk" class="btn-download-gold">
+                    <i class="fas fa-download"></i>
+                    <span>DOWNLOAD APP</span>
                 </a>
-        </div>
-    </nav>
 
-    <!-- HERO -->
-    <section class="hero">
-        <div class="hero-inner">
-            <div class="hero-logo-wrap">
-                <div class="hero-logo-ring">
-                    <img src="logo.webp" alt="Kalyan Master">
-                </div>
-            </div>
-
-            <div class="hero-badge">✦ India's Most Trusted Platform ✦</div>
-
-            <h1>
-                Kalyan <span>Master</span><br>
-                Matka Gaming
-            </h1>
-            <p class="hero-desc">
-                Play your favorite Matka games — Kalyan, Starline, Gali Disawar and more.<br>
-                Instant results • Fast payouts • 24/7 Support
-            </p>
-
-            <div class="hero-cta">
-                <a href="KalyanMaster.apk" class="btn-hero btn-hero-primary">
-                    <i class="fas fa-download"></i> Download App
+                <!-- 2. WHATSAPP US BUTTON -->
+                <a href="https://wa.me/918905652643?text=Welcome+To+Tara+567" target="_blank" class="btn-whatsapp-green">
+                    <i class="fab fa-whatsapp"></i>
+                    <span>WHATSAPP US</span>
                 </a>
-                <a href="https://wa.me/919610232013?text=Welcome+To+Laxmi+Kalyan" target="_blank" class="btn-hero btn-hero-whatsapp">
-                    <i class="fab fa-whatsapp"></i> WhatsApp
-                </a>
-                <a href="KalyanMaster.apk" class="btn-hero btn-hero-outline">
-                    <i class="fas fa-sign-in-alt"></i> Login & Play
-                </a>
+
+                <!-- 3. SAFE & SECURE CARD -->
+                <div class="trust-card">
+                    <i class="fas fa-award laurel-leaf"></i>
+                    <div class="trust-center-content">
+                        <div class="shield-badge">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <div class="trust-text">
+                            <div class="trust-title">SAFE &amp; SECURE</div>
+                            <div class="trust-subtitle">YOUR SAFETY, OUR PRIORITY</div>
+                        </div>
+                    </div>
+                    <i class="fas fa-award laurel-leaf"></i>
+                </div>
+
             </div>
 
-            <div class="hero-stats">
-                <div class="stat-item">
-                    <span class="stat-num">10K+</span>
-                    <span class="stat-label">Players</span>
-                </div>
-                <div class="stat-item">
-                    <span class="stat-num">100%</span>
-                    <span class="stat-label">Secure</span>
-                </div>
-                <div class="stat-item">
-                    <span class="stat-num">24/7</span>
-                    <span class="stat-label">Support</span>
-                </div>
-                <div class="stat-item">
-                    <span class="stat-num">Fast</span>
-                    <span class="stat-label">Payouts</span>
-                </div>
-            </div>
         </div>
-    </section>
-
-    <!-- MARKETS LIST SECTION -->
-    <section class="section" id="markets">
-        <div class="container">
-            <div class="section-head">
-                <span class="label"><i class="fas fa-globe"></i> Markets List</span>
-                <h2>सभी मार्केट्स यहाँ उपलब्ध हैं</h2>
-                <p>Play in India's top Matka markets with live results and fast payout declarations</p>
-                <div class="divider"></div>
-            </div>
-
-            <div class="markets-grid">
-                <!-- Main Markets -->
-                <div class="market-category-card">
-                    <div class="market-cat-icon blue-gradient"><i class="fas fa-store"></i></div>
-                    <h3>Main Markets</h3>
-                    <p class="market-cat-desc">India's most popular traditional daily markets with high odds.</p>
-                    <div class="market-list-tags">
-                        <span class="market-tag">Kalyan</span>
-                        <span class="market-tag">Kalyan Night</span>
-                        <span class="market-tag">Madhur Morning</span>
-                        <span class="market-tag">Madhur Night</span>
-                        <span class="market-tag">Milan Day/Night</span>
-                        <span class="market-tag">Rajdhani Day/Night</span>
-                        <span class="market-tag">Sridevi</span>
-                        <span class="market-tag">Supreme Day/Night</span>
-                    </div>
-                </div>
-
-                <!-- Gali Disawar -->
-                <div class="market-category-card">
-                    <div class="market-cat-icon cyan-gradient"><i class="fas fa-fire"></i></div>
-                    <h3>Gali &amp; Disawar</h3>
-                    <p class="market-cat-desc">Famous North Indian markets with rapid outcomes and high margins.</p>
-                    <div class="market-list-tags">
-                        <span class="market-tag">Gali</span>
-                        <span class="market-tag">Disawar</span>
-                        <span class="market-tag">Faridabad</span>
-                        <span class="market-tag">Ghaziabad</span>
-                        <span class="market-tag">Delhi Bazar</span>
-                        <span class="market-tag">Shri Ganesh</span>
-                    </div>
-                </div>
-
-                <!-- Starline -->
-                <div class="market-category-card">
-                    <div class="market-cat-icon indigo-gradient"><i class="fas fa-star animate-spin-slow"></i></div>
-                    <h3>Starline Markets</h3>
-                    <p class="market-cat-desc">Play and win every hour, 24x7. Quick results declared round-the-clock.</p>
-                    <div class="market-list-tags">
-                        <span class="market-tag">Kalyan Starline</span>
-                        <span class="market-tag">Milan Starline</span>
-                        <span class="market-tag">Gali Starline</span>
-                        <span class="market-tag">Dubai Starline</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- GAME RATES -->
-    <section class="section section-alt">
-        <div class="container">
-            <div class="section-head">
-                <span class="label"><i class="fas fa-crown"></i> Game Rates</span>
-                <h2>Win Big with Every Bet</h2>
-                <p>Competitive rates for all game types</p>
-                <div class="divider"></div>
-            </div>
-
-            <div class="rates-wrap">
-                <div class="rates-head">
-                    <div>Game Type</div>
-                    <div>Bet (₹10)</div>
-                    <div>Win Amount</div>
-                </div>
-                                    <div class="rates-row ">
-                        <div class="game-type-cell">
-                            <i class="fas fa-dice"></i>
-                            Single Digit
-                        </div>
-                        <div class="bet-cell">₹1</div>
-                        <div class="win-cell">₹10</div>
-                    </div>
-                                    <div class="rates-row ">
-                        <div class="game-type-cell">
-                            <i class="fas fa-dice"></i>
-                            Jodi Digit
-                        </div>
-                        <div class="bet-cell">₹1</div>
-                        <div class="win-cell">₹100</div>
-                    </div>
-                                    <div class="rates-row ">
-                        <div class="game-type-cell">
-                            <i class="fas fa-dice"></i>
-                            Red Bracket
-                        </div>
-                        <div class="bet-cell">₹1</div>
-                        <div class="win-cell">₹97.5</div>
-                    </div>
-                                    <div class="rates-row ">
-                        <div class="game-type-cell">
-                            <i class="fas fa-dice"></i>
-                            Single Pana
-                        </div>
-                        <div class="bet-cell">₹1</div>
-                        <div class="win-cell">₹160</div>
-                    </div>
-                                    <div class="rates-row ">
-                        <div class="game-type-cell">
-                            <i class="fas fa-dice"></i>
-                            Dubble Pana
-                        </div>
-                        <div class="bet-cell">₹1</div>
-                        <div class="win-cell">₹320</div>
-                    </div>
-                                    <div class="rates-row ">
-                        <div class="game-type-cell">
-                            <i class="fas fa-dice"></i>
-                            Triple Pana
-                        </div>
-                        <div class="bet-cell">₹1</div>
-                        <div class="win-cell">₹1000</div>
-                    </div>
-                                    <div class="rates-row ">
-                        <div class="game-type-cell">
-                            <i class="fas fa-dice"></i>
-                            Half Sangam
-                        </div>
-                        <div class="bet-cell">₹1</div>
-                        <div class="win-cell">₹1000</div>
-                    </div>
-                                    <div class="rates-row  highlight-row ">
-                        <div class="game-type-cell">
-                            <i class="fas fa-dice"></i>
-                            Full Sangam
-                        </div>
-                        <div class="bet-cell">₹1</div>
-                        <div class="win-cell">₹10000</div>
-                    </div>
-                            </div>
-
-            <p style="text-align:center; font-size:13px; color:var(--text-light); margin-top:18px;">
-                * Minimum bet starts from ₹5. Maximum winning may vary by game.
-            </p>
-        </div>
-    </section>
-
-    <!-- FEATURES -->
-    <section class="section">
-        <div class="container">
-            <div class="section-head">
-                <span class="label" style="background: linear-gradient(135deg, #b8860b, #c9a227);">
-                    <i class="fas fa-star"></i> Why Choose Us
-                </span>
-                <h2>Premium Features</h2>
-                <p>Everything you need for the best gaming experience</p>
-                <div class="divider"></div>
-            </div>
-
-            <div class="features-grid">
-                <div class="feature-card">
-                    <div class="feature-icon"><i class="fas fa-shield-alt"></i></div>
-                    <h4>100% Secure</h4>
-                    <p>Bank-grade encryption for all your transactions and data</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon"><i class="fas fa-bolt"></i></div>
-                    <h4>Instant Results</h4>
-                    <p>Live real-time updates the moment results are declared</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon"><i class="fas fa-rupee-sign"></i></div>
-                    <h4>Fast Payouts</h4>
-                    <p>Winnings credited directly to your account instantly</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon"><i class="fas fa-headset"></i></div>
-                    <h4>24/7 Support</h4>
-                    <p>Round-the-clock customer assistance via WhatsApp & call</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    
-    <!-- HOW TO PLAY -->
-    <section class="section">
-        <div class="container">
-            <div class="section-head">
-                <span class="label" style="background: linear-gradient(135deg, #1a6b3a, #2ecc71); color:#fff;">
-                    <i class="fas fa-gamepad"></i> Get Started
-                </span>
-                <h2>How to Play</h2>
-                <p>Start winning in just 3 simple steps</p>
-                <div class="divider"></div>
-            </div>
-
-            <div class="steps">
-                <div class="step-card">
-                    <div class="step-num">1</div>
-                    <div class="step-icon"><i class="fas fa-download"></i></div>
-                    <h4>Download App</h4>
-                    <p>Download our premium APK from the website and install it on your Android phone</p>
-                </div>
-                <div class="step-card">
-                    <div class="step-num">2</div>
-                    <div class="step-icon"><i class="fas fa-user-plus"></i></div>
-                    <h4>Create Account</h4>
-                    <p>Register with your mobile number and set a secure password to create your account</p>
-                </div>
-                <div class="step-card">
-                    <div class="step-num">3</div>
-                    <div class="step-icon"><i class="fas fa-trophy"></i></div>
-                    <h4>Start Winning</h4>
-                    <p>Add funds, pick your game, place your bets and watch your winnings grow!</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- CTA SECTION -->
-    <section class="cta-section">
-        <div class="container" style="position:relative; z-index:1;">
-            <h2>🎰 Ready to Win Big?</h2>
-            <p>Join thousands of players on India's most trusted Matka platform</p>
-            <div class="cta-btns">
-                <a href="KalyanMaster.apk" class="cta-btn cta-btn-gold">
-                    <i class="fas fa-download"></i> Download Now
-                </a>
-                <a href="https://wa.me/919610232013?text=Welcome+To+Laxmi+Kalyan" target="_blank" class="cta-btn cta-btn-wa">
-                    <i class="fab fa-whatsapp"></i> WhatsApp Us
-                </a>
-                <a href="tel:+919610232013" class="cta-btn cta-btn-phone">
-                    <i class="fas fa-phone"></i> Call Us
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <!-- FOOTER -->
-    <footer>
-        <div class="footer-inner">
-            <div class="footer-top">
-                <div class="footer-logo">
-                    <img src="logo.webp" alt="Kalyan Master">
-                    <div class="footer-logo-text">
-                        <div class="name">KALYAN Master</div>
-                        <div class="sub">✦ MATKA GAMING PLATFORM ✦</div>
-                    </div>
-                </div>
-                <div class="footer-links">
-                    <a href="KalyanMaster.apk">Login</a>
-                    <a href="KalyanMaster.apk">Register</a>
-                    <a href="KalyanMaster.apk">Download APK</a>
-                    <a href="tel:+919610232013">Contact</a>
-                    <a href="https://wa.me/919610232013" target="_blank">WhatsApp</a>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>© 2026 Kalyan Master. All rights reserved. &nbsp;|&nbsp; Play Responsibly.</p>
-            </div>
-        </div>
-    </footer>
-
-    <!-- FLOATING DOWNLOAD -->
-    <a href="KalyanMaster.apk" class="floating-btn">
-        <i class="fas fa-download"></i> Download Now
-    </a>
+    </main>
 
 </body>
 </html>
